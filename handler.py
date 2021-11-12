@@ -13,5 +13,5 @@ def transform(forTrans):
 
 
 def encryptC(forEnc):
-    listChar = forEnc.transform()
+    listChar = transform(forEnc)
     print(listChar)
