@@ -3,7 +3,7 @@ import handler
 
 def main():
     forEncryption = input()
-    forEncryption.handler.encryptC()
+    handler.encryptC(forEncryption)
 
 
 if __name__ == '__main__':
