@@ -2,16 +2,18 @@ import config
 
 
 def keyInit():
-    config.key = 3
+    config.key = 5
 
 
-def transform(forTrans):
-    listT = []
-    for i in forTrans:
-        listT.append(i)
-    return listT
-
-
+# noinspection PyCallingNonCallable
 def encryptC(forEnc):
-    listChar = transform(forEnc)
-    print(listChar)
+    finall = ''
+    forEnc.upper()
+    for i in forEnc:
+        index = config.alphabetUpper.find(i)
+        newIndex = index + config.key
+        if i in config.alphabetUpper:
+            finall = finall + config.alphabetUpper[newIndex]
+        else:
+            finall = finall + i
+    print(finall)
